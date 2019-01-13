@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "9p.h": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "set_seg.h": "c"
     }
 }
