@@ -68,6 +68,17 @@ struct tty_struct
   struct tty_queue secondary;	// tty 辅助队列(存放规范模式字符序列)，
 };				// 可称为规范(熟)模式队列。
 
+struct termios {
+	tcflag_t	c_iflag;	/* input flags */
+	tcflag_t	c_oflag;	/* output flags */
+	tcflag_t	c_cflag;	/* control flags */
+	tcflag_t	c_lflag;	/* local flags */
+	cc_t		c_cc[NCCS];	/* control chars */
+	speed_t		c_ispeed;	/* input speed */
+	speed_t		c_ospeed;	/* output speed */
+};
+
+
 extern struct tty_struct tty_table[];	// tty 结构数组。
 
 /* intr=^C quit=^| erase=del kill=^U
